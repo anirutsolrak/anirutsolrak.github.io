@@ -1,5 +1,5 @@
 // Substitua 'SUA_TOKEN_AQUI' pela sua token de acesso à API da Alura
-const token = '';
+const token = '87685322f587772da279dfd2db7f46252c44140bfd54e4da6eaaeed2ff94f23d';
 
 // URL da API da Alura
 const apiUrl = 'https://cursos.alura.com.br/api/v1/me';
