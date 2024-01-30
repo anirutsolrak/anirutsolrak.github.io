@@ -1,5 +1,5 @@
 // Substitua 'SUA_TOKEN_AQUI' pela sua token de acesso à API da Alura
-const token = '87685322f587772da279dfd2db7f46252c44140bfd54e4da6eaaeed2ff94f23d';
+const token = '';
 
 // URL da API da Alura
 const apiUrl = 'https://cursos.alura.com.br/api/v1/me';
@@ -56,8 +56,8 @@ function exibirCertificadosPopup() {
     popup.document.write('</body></html>');
 }
 
-// Chame a função para obter e exibir os certificados ao carregar a página
-document.addEventListener('DOMContentLoaded', obterCertificados);
-
 // Adiciona um evento de clique ao botão
-document.getElementById('verCertificadosBtn').addEventListener('click', exibirCertificadosPopup);
+const verCertificadosBtn = document.getElementById('verCertificadosBtn');
+if (verCertificadosBtn) {
+    verCertificadosBtn.addEventListener('click', exibirCertificadosPopup);
+}
