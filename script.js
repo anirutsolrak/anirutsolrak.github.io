@@ -23,8 +23,7 @@ async function obterCertificados() {
         const certificadosSection = document.getElementById('certificados');
         certificadosSection.innerHTML = '<h2>Certificados Obtidos</h2>';
 
-        // Adicione aqui o código para exibir os certificados usando os dados da API
-        const { courseProgress } = data;
+        const { courseProgress, guides } = data;
 
         if (courseProgress && courseProgress.length > 0) {
             const listaCertificados = document.createElement('ul');
@@ -37,8 +36,23 @@ async function obterCertificados() {
             });
 
             certificadosSection.appendChild(listaCertificados);
-        } else {
-            certificadosSection.innerHTML = '<p>Nenhum certificado encontrado.</p>';
+        }
+
+        if (guides && guides.length > 0) {
+            const listaGuias = document.createElement('ul');
+
+            guides.forEach((guia) => {
+                const itemGuia = document.createElement('li');
+                itemGuia.textContent = `Guia: ${guia.name}, Total de Cursos: ${guia.totalCourses}, Cursos Finalizados: ${guia.finishedCourses}`;
+
+                listaGuias.appendChild(itemGuia);
+            });
+
+            certificadosSection.appendChild(listaGuias);
+        }
+
+        if (!courseProgress.length && !guides.length) {
+            certificadosSection.innerHTML = '<p>Nenhum certificado ou guia encontrado.</p>';
         }
 
     } catch (error) {
@@ -56,8 +70,8 @@ function exibirCertificadosPopup() {
     popup.document.write('</body></html>');
 }
 
+// Chame a função para obter e exibir os certificados ao carregar a página
+document.addEventListener('DOMContentLoaded', obterCertificados);
+
 // Adiciona um evento de clique ao botão
-const verCertificadosBtn = document.getElementById('verCertificadosBtn');
-if (verCertificadosBtn) {
-    verCertificadosBtn.addEventListener('click', exibirCertificadosPopup);
-}
+document.getElementById('verCertificadosBtn').addEventListener('click', exibirCertificadosPopup);
