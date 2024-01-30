@@ -24,6 +24,22 @@ async function obterCertificados() {
         certificadosSection.innerHTML = '<h2>Certificados Obtidos</h2>';
 
         // Adicione aqui o código para exibir os certificados usando os dados da API
+        const { courseProgress } = data;
+
+        if (courseProgress && courseProgress.length > 0) {
+            const listaCertificados = document.createElement('ul');
+
+            courseProgress.forEach((curso) => {
+                const itemCertificado = document.createElement('li');
+                itemCertificado.textContent = `Curso: ${curso.name}, Progresso: ${curso.progress}%`;
+
+                listaCertificados.appendChild(itemCertificado);
+            });
+
+            certificadosSection.appendChild(listaCertificados);
+        } else {
+            certificadosSection.innerHTML = '<p>Nenhum certificado encontrado.</p>';
+        }
 
     } catch (error) {
         console.error('Erro na obtenção dos certificados:', error.message);
