@@ -46,5 +46,18 @@ async function obterCertificados() {
     }
 }
 
+// Função para exibir os certificados em um popup
+function exibirCertificadosPopup() {
+    obterCertificados(); // Chama a função de obtenção de certificados
+    const popup = window.open('', 'Certificados', 'width=600,height=400,scrollbars=yes,resizable=yes');
+    popup.document.write('<html><head><title>Certificados</title></head><body>');
+    popup.document.write('<h1>Certificados</h1>');
+    popup.document.write(document.getElementById('certificados').innerHTML);
+    popup.document.write('</body></html>');
+}
+
 // Chame a função para obter e exibir os certificados ao carregar a página
 document.addEventListener('DOMContentLoaded', obterCertificados);
+
+// Adiciona um evento de clique ao botão
+document.getElementById('verCertificadosBtn').addEventListener('click', exibirCertificadosPopup);
