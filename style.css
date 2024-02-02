@@ -1,6 +1,11 @@
-/* Reset CSS e importação de fontes */
+/* Reset CSS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Paleta de Cores e Fontes */
 :root {
@@ -8,16 +13,19 @@
     --cor-secundaria: #ff6347;
     --cor-terciaria: #333;
     --cor-hover: #d84315;
+
     --fonte-principal: 'Montserrat', sans-serif;
     --fonte-titulo: 'Krona One', sans-serif;
 }
 
 /* Estilos Gerais */
 body {
+    height: 100vh;
+    width: 100vw;
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     font-family: var(--fonte-principal);
-    margin: 0;
+    font-size: 18px; /* Tamanho base da fonte */
 }
 
 .container {
@@ -28,46 +36,54 @@ body {
 
 /* Apresentação */
 .apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
-    padding: 5vw;
+}
+
+.apresentacao__conteudo {
+    padding: 20px;
 }
 
 .apresentacao__conteudo__titulo {
     font-family: var(--fonte-titulo);
-    font-size: 1,5 rem;
-    margin-bottom: 2vw;
+    font-size: 2.8rem; /* Aumento de tamanho para melhor legibilidade */
+    margin-bottom: 10px;
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 1,5 rem;
+    font-size: 1.2rem;
     line-height: 1.5;
-    margin-bottom: 4vw;
+    margin-bottom: 20px;
 }
 
-/* Convite, Bio e Projetos */
+//* Convite, Bio e Projetos */
 .convite-bio-projetos {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 5vw;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior para melhorar a aparência */
     text-align: center;
 }
 
 .convite-bio-projetos a {
     display: flex;
     align-items: center;
-    margin-bottom: 2vw;
+    margin-bottom: 10px;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
 }
 
 .botao-convite {
-    padding: 2vw 4vw;
+    display: inline-block;
+    padding: 10px 20px;
     background-color: var(--cor-secundaria);
     color: #fff;
-    border-radius: 1vw;
+    border-radius: 5px;
     text-decoration: none;
     font-family: var(--fonte-principal);
     transition: background-color 0.3s ease;
@@ -77,6 +93,8 @@ body {
 .botao-convite:hover {
     background-color: var(--cor-hover);
 }
+
+/* ... (seu código existente continua aqui) ... */
 
 /* Imagem na Apresentação */
 .imagem-container {
