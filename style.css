@@ -1,3 +1,13 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de Cores e Fontes */
 :root {
     --cor-primaria: #fdebd3;
     --cor-secundaria: #ff6347;
@@ -8,30 +18,106 @@
     --fonte-titulo: 'Krona One', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos Gerais */
 body {
     height: 100vh;
-  width: 100vw;
+    width: 100vw;
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     font-family: var(--fonte-principal);
-  
 }
 
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Apresentação */
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.apresentacao__conteudo {
+    padding: 20px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Convite, Bio e Projetos */
+.convite-bio-projetos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior para melhorar a aparência */
+    text-align: center;
+}
+
+.convite-bio-projetos a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.botao-convite {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-secundaria);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    transition: background-color 0.3s ease;
+    text-align-last: center;
+}
+
+.botao-convite:hover {
+    background-color: var(--cor-hover);
+}
+
+/* Imagem na Apresentação */
+.imagem-container {
+    width: 100%;
+    text-align: center;
+}
+
+.apresentacao__imagem {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cabeçalho */
 header {
     background-color: var(--cor-secundaria);
 }
 
+/* Navegação */
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -40,70 +126,58 @@ nav ul {
 }
 
 nav li {
-    margin-right: 10%;
+    margin: 0 15px;
     text-align: center;
+    font-family: var(--fonte-principal);
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    padding: 1rem 1.3rem;
-    background-color: var(--cor-terciaria);
+    padding: 10px 20px;
+    background-color: var(--cor-secundaria);
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-family: var(--fonte-principal);
 }
 
 nav a:hover {
     background-color: var(--cor-hover);
 }
 
-.apresentacao {
-    margin: 10%;
+/* Projetos */
+.projetos {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-  
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
 }
 
-.apresentacao__conteudo {
-    max-width: 100%;
-  
+.projeto {
+    width: 45%;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
 }
 
-.apresentacao__conteudo__titulo {
-    font-size: 36px;
-    font-family: var(--fonte-titulo);
+.projeto a {
+    display: block;
 }
 
-.apresentacao__conteudo__texto {
-    font-size: 24px;
-    text-align: justify;
-}
-
-.apresentacao__imagem {
+.projeto img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-top: 15px;
 }
 
-.apresentacao__conteudo a {
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--cor-secundaria);
-    color: #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-right: 15px;
-    margin-top: 15px;
+.projeto h2 {
+    margin-top: 10px;
 }
 
-.apresentacao__conteudo a:hover {
-    background-color: var(--cor-hover);
-}
-
+/* Rodapé */
 footer {
     background-color: var(--cor-secundaria);
     padding: 10px 0;
@@ -111,18 +185,99 @@ footer {
     color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-    .apresentacao {
+/* Layout Responsivo */
+@media screen and (max-width: 768px) {
+    .projetos {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .apresentacao__conteudo {
-        width: 100%;
-        margin-bottom: 20px;
+    .projeto {
+        width: 80%;
     }
+}
 
-    .apresentacao__conteudo a {
-        margin-right: 0;
-    }
+/* Página Bio - Estilizações Adicionais */
+.bio {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilização do botão de download na página bio */
+#downloadButton {
+    padding: 10px 20px;
+    background-color: var(--cor-secundaria);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#downloadButton:hover {
+    background-color: var(--cor-hover);
+}
+
+/* Estilização da seção de badges na página bio */
+.badge-section-container {
+  text-align: center;
+    margin-top: 20px;
+}
+
+.badge-section-container h2 {
+    margin-bottom: 10px;
+}
+
+.badge-section {
+    display: flex;
+    justify-content: center;
+}
+
+#badgeButton {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilização do botão de download na página bio */
+/* Estilização do botão de download na página bio */
+/* Estilização do botão de download na página bio */
+#downloadButton {
+    padding: 10px 20px;
+    background-color: var(--cor-secundaria);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#downloadButton:hover {
+    background-color: var(--cor-hover);
+    text-decoration: none; /* Remover sublinhado no hover */
+}
+
+/* Remover sublinhado nos links de toda a página */
+a {
+    text-decoration: none;
+}
+
+/* Remover sublinhado nos links durante o hover */
+a:hover {
+    text-decoration: none;
+}
+/* Rodapé */
+footer {
+    background-color: var(--cor-secundaria);
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
 }
