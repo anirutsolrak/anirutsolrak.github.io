@@ -254,24 +254,27 @@ a:hover {
 }
 
 /* Adicionada consulta de mídia para telas maiores */
+/* Adicionada consulta de mídia para telas maiores */
 @media screen and (min-width: 769px) {
     .bio {
         font-size: 20px; /* Aumento do tamanho da fonte na página bio para telas maiores */
     }
 
     .projetos {
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column; /* Alterado para coluna */
+        align-items: center;
     }
 
     .projeto {
-        width: 45%;
+        width: 70%; /* Ajuste na largura dos projetos */
         margin: 10px;
         text-align: center;
         overflow: hidden;
     }
 
     .projeto img {
+        max-width: 100%; /* Adicionada a largura máxima para as imagens dos projetos */
+        height: auto;
         margin-bottom: 10px; /* Adicionada margem inferior para separar as imagens */
     }
 }
