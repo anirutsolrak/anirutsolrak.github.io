@@ -134,7 +134,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: #fff;
-    padding: 1,5 rem;
+    padding: 2vw 4vw;
     border-radius: 1vw;
     transition: background-color 0.3s ease;
     font-family: var(--fonte-principal);
@@ -278,3 +278,14 @@ a:hover {
         margin-bottom: 10px; /* Adicionada margem inferior para separar as imagens */
     }
 }
+/* No seu arquivo style.css */
+/* ... (seu código existente) ... */
+
+/* Ajuste para telas maiores */
+@media screen and (min-width: 1200px) {
+    nav a {
+        font-size: 3 rem; /* Ajuste o tamanho conforme necessário */
+    }
+}
+
+/* ... (seu código existente) ... */
