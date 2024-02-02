@@ -134,7 +134,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: #fff;
-    padding: 2vw 4vw;
+    padding: 1,5 rem;
     border-radius: 1vw;
     transition: background-color 0.3s ease;
     font-family: var(--fonte-principal);
