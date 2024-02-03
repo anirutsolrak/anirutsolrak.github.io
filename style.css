@@ -280,12 +280,3 @@ a:hover {
 }
 /* No seu arquivo style.css */
 /* ... (seu código existente) ... */
-
-/* Ajuste para telas maiores */
-@media screen and (min-width: 1200px) {
-    nav a {
-        font-size: 3 rem; /* Ajuste o tamanho conforme necessário */
-    }
-}
-
-/* ... (seu código existente) ... */
