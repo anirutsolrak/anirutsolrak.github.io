@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const url = "https://www.alura.com.br/api/dashboard/44d5ec46169376f3b6fbda1dc2c7c03c6e3e622aaa5b9127b4a6554cde0c0e9d";
+    const url = "https://www.alura.com.br/api/dashboard/49b605d98935c4c5a6769e68a4873f973754812fc3b1b3b7df7de4c806e69f65";
 
     fetch(url)
         .then(response => response.json())
