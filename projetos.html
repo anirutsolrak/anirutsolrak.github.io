@@ -6,40 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bio.html">Bio</a></li>
-            </ul>
+    <header class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Meu Portfólio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bio.html">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projetos.html">Projetos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="projetos">
-        <h1>Meus projetos até aqui</h1>
-        <div class="projeto">
-            <a href="https://jogo-rouge-three.vercel.app">
-                <img src="thumb_jogo.jpg">
-                <h2>Jogo do Número Secreto</h2>
-            </a>
-        </div>
-        <div class="projeto">
-            <a href="https://encriptacao.vercel.app/">
-                <img src="thumb_descript.jpg">
-                <h2>Descriptação e Encriptação de Texto</h2>
-            </a>
+        <div class="container">
+            <h1>Meus projetos até aqui</h1>
+            <div class="projeto">
+                <a href="https://jogo-rouge-three.vercel.app">
+                    <img src="./assets/thumb_jogo.jpg" class="img-fluid">
+                    <h2>Jogo do Número Secreto</h2>
+                </a>
+            </div>
+            <div class="projeto">
+                <a href="https://encriptacao.vercel.app/">
+                    <img src="./assets/thumb_descript.jpg" class="img-fluid">
+                    <h2>Descriptação e Encriptação de Texto</h2>
+                </a>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="bg-secondary text-white text-center py-4">
         <p>Site desenvolvido por Carlos Eduardo Turina</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body
