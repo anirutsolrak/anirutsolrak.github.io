@@ -6,55 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Turina - Bio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-            </ul>
+    <header class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Meu Portfólio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bio.html">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projetos.html">Projetos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="bio">
-        <p>Olá, meu nome é Carlos Eduardo Turina. Sou um entusiasta de desenvolvimento web apaixonado por transformar ideias em projetos incríveis.</p>
+        <div class="container">
+            <p>Olá, meu nome é Carlos Eduardo Turina. Sou um entusiasta de desenvolvimento web apaixonado por transformar ideias em projetos incríveis.</p>
 
-        <!-- Botão estilizado para baixar o currículo -->
-        <a href="Profile.pdf" download>
-            <button id="downloadButton">Download Currículo</button>
-        </a>
+            <!-- Botão estilizado para baixar o currículo -->
+            <a href="Profile.pdf" download>
+                <button id="downloadButton" class="btn btn-primary">Download Currículo</button>
+            </a>
 
-        <!-- Nova seção para cursos e certificados -->
-        <section class="bio-section">
-            <div class="bio-column">
-                <h2>Cursos e Certificados</h2>
-                <div id= "cursosaqui"></div>
-                <!-- Adicione mais cursos e certificados conforme necessário -->
-            </div>
+            <!-- Nova seção para cursos e certificados -->
+            <section class="bio-section">
+                <div class="bio-column">
+                    <h2>Cursos e Certificados</h2>
+                    <div id="cursosaqui"></div>
+                    <!-- Adicione mais cursos e certificados conforme necessário -->
+                </div>
 
-            <!-- Texto central existente -->
-            <div class="bio-column">
-                <h2>Minha História</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, urna eu accumsan eleifend, justo tellus malesuada metus, non efficitur est metus vel turpis.</p>
-            </div>
+                <!-- Texto central existente -->
+                <div class="bio-column">
+                    <h2>Minha História</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, urna eu accumsan eleifend, justo tellus malesuada metus, non efficitur est metus vel turpis.</p>
+                </div>
 
-            <!-- Nova seção para hobbies e passatempos -->
-            <div class="bio-column">
-                <h2>Hobbies e Passatempos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, urna eu accumsan eleifend, justo tellus malesuada metus.</p>
-                <!-- Adicione mais hobbies e passatempos conforme necessário -->
-            </div>
-        </section>
+                <!-- Nova seção para hobbies e passatempos -->
+                <div class="bio-column">
+                    <h2>Hobbies e Passatempos</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, urna eu accumsan eleifend, justo tellus malesuada metus.</p>
+                    <!-- Adicione mais hobbies e passatempos conforme necessário -->
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="bg-secondary text-white text-center py-4">
         <p>Site desenvolvido por Carlos Eduardo Turina</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 
