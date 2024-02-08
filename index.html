@@ -6,33 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
+    <header class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Meu Portfólio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bio.html">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projetos.html">Projetos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Bem-vindo ao meu Portfólio Digital!</h1>
-            <p class="apresentacao__conteudo__texto">Oi, sou Carlos Eduardo Turina, um entusiasta de desenvolvimento web apaixonado por transformar ideias em projetos incríveis.<br> Aqui, você encontrará uma variedade de trabalhos que demonstrem minha habilidade e paixão pelo desenvolvimento de software. Explore e descubra mais sobre meu mundo digital!</p>
-            <div class="convite-bio-projetos">
-                <p>Curioso sobre minha história?</p>
-                <a href="bio.html" class="botao-convite">Conheça minha Bio</a>
-                <p>Ou talvez queira explorar meus projetos?</p>
-                <a href="projetos.html" class="botao-convite">Veja meus Projetos</a>
+            <div class="container">
+                <h1 class="apresentacao__conteudo__titulo">Bem-vindo ao meu Portfólio Digital!</h1>
+                <p class="apresentacao__conteudo__texto">Oi, sou Carlos Eduardo Turina, um entusiasta de
+                    desenvolvimento web apaixonado por transformar ideias em projetos incríveis.<br> Aqui, você
+                    encontrará uma variedade de trabalhos que demonstrem minha habilidade e paixão pelo desenvolvimento
+                    de software. Explore e descubra mais sobre meu mundo digital!</p>
+                <div class="convite-bio-projetos">
+                    <p>Curioso sobre minha história?</p>
+                    <a href="bio.html" class="btn btn-primary">Conheça minha Bio</a>
+                    <p>Ou talvez queira explorar meus projetos?</p>
+                    <a href="projetos.html" class="btn btn-primary">Veja meus Projetos</a>
+                </div>
             </div>
         </section>
         <section class="imagem-container">
-            <img class="apresentacao__imagem" src="imagem.png" alt="Foto do Carlos Eduardo Turina em destaque">
+            <img class="apresentacao__imagem img-fluid" src="assets/imagem.png" alt="Foto do Carlos Eduardo Turina em destaque">
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-secondary text-white text-center py-4">
         <p>Site desenvolvido por Carlos Eduardo Turina</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
-<!-- Referência ao arquivo JavaScript externo -->
-<script src="scripts.js"></script>
+
 </html>
